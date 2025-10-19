@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/master.swiftdeps"
+  },
+  "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingAlgorithmTests.swift": {
+    "dependencies": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingAlgorithmTests.d",
+    "object": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingAlgorithmTests.swift.o",
+    "swiftmodule": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingAlgorithmTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingAlgorithmTests.swiftdeps"
+  },
+  "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingRepositoryTests.swift": {
+    "dependencies": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingRepositoryTests.d",
+    "object": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingRepositoryTests.swift.o",
+    "swiftmodule": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingRepositoryTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingRepositoryTests.swiftdeps"
+  },
+  "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingViewModelTests.swift": {
+    "dependencies": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingViewModelTests.d",
+    "object": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingViewModelTests.swift.o",
+    "swiftmodule": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingViewModelTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingViewModelTests.swiftdeps"
+  }
+}

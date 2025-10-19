@@ -1,0 +1,880 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitPackageTests.xctest/Contents/MacOS/SortingAnimationKitPackageTests",
+      "packagePath" : "/Users/Azeroth/SortingAnimationKit",
+      "productName" : "SortingAnimationKitPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.SortingAnimationKit-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/sources",
+      "importPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BubbleSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BucketSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/CountingSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/HeapSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/InsertionSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/MergeSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/QuickSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/RadixSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SelectionSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/ShellSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmBase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmFactory.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingExecutor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingRepository.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingAlgorithm.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingElement.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Repositories/SortingRepositoryProtocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/UseCases/GenerateArrayUseCase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Coordinators/SortingCoordinator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmListView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAnimationView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAppView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/SortingAnimationKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SortingAnimationKit",
+      "moduleOutputPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.swiftmodule",
+      "objects" : [
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/BubbleSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/BucketSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/CountingSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/HeapSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/InsertionSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/MergeSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/QuickSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/RadixSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SelectionSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/ShellSort.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithmBase.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithmFactory.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingExecutor.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingRepository.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithm.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingElement.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingRepositoryProtocol.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/GenerateArrayUseCase.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingCoordinator.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingViewModel.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/AlgorithmDetailView.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/AlgorithmListView.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationView.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAppView.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationKit.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx12.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j12",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationKit-Swift.h",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "sortinganimationkit"
+      ],
+      "outputFileMapPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/BubbleSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/BucketSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/CountingSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/HeapSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/InsertionSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/MergeSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/QuickSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/RadixSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SelectionSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/ShellSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithmBase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithmFactory.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingExecutor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingRepository.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithm.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingElement.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingRepositoryProtocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/GenerateArrayUseCase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/AlgorithmDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/AlgorithmListView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAppView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BubbleSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BucketSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/CountingSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/HeapSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/InsertionSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/MergeSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/QuickSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/RadixSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SelectionSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/ShellSort.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmBase.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmFactory.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingExecutor.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingRepository.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingAlgorithm.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingElement.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Repositories/SortingRepositoryProtocol.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Domain/UseCases/GenerateArrayUseCase.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Coordinators/SortingCoordinator.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmDetailView.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmListView.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAnimationView.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAppView.swift",
+        "/Users/Azeroth/SortingAnimationKit/Sources/SortingAnimationKit.swift"
+      ],
+      "tempsPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SortingAnimationKitTests-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/sources",
+      "importPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingAlgorithmTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingRepositoryTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingViewModelTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SortingAnimationKitTests",
+      "moduleOutputPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.swiftmodule",
+      "objects" : [
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingAlgorithmTests.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingRepositoryTests.swift.o",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingViewModelTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx13.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j12",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "sortinganimationkit"
+      ],
+      "outputFileMapPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingAlgorithmTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingRepositoryTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingViewModelTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingAlgorithmTests.swift",
+        "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingRepositoryTests.swift",
+        "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingViewModelTests.swift"
+      ],
+      "tempsPath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "SortingAnimationKit" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SortingAnimationKit",
+      "-package-name",
+      "sortinganimationkit",
+      "-incremental",
+      "-c",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BubbleSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BucketSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/CountingSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/HeapSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/InsertionSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/MergeSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/QuickSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/RadixSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SelectionSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/ShellSort.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmBase.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmFactory.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingExecutor.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingRepository.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingAlgorithm.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingElement.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Repositories/SortingRepositoryProtocol.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Domain/UseCases/GenerateArrayUseCase.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Coordinators/SortingCoordinator.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmDetailView.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmListView.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAnimationView.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAppView.swift",
+      "/Users/Azeroth/SortingAnimationKit/Sources/SortingAnimationKit.swift",
+      "-I",
+      "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug",
+      "-target",
+      "x86_64-apple-macosx12.0",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j12",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationKit-Swift.h",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "sortinganimationkit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "SortingAnimationKitTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SortingAnimationKitTests",
+      "-package-name",
+      "sortinganimationkit",
+      "-incremental",
+      "-c",
+      "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingAlgorithmTests.swift",
+      "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingRepositoryTests.swift",
+      "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingViewModelTests.swift",
+      "-I",
+      "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug",
+      "-target",
+      "x86_64-apple-macosx13.0",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j12",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "sortinganimationkit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "SortingAnimationKit" : [
+
+    ],
+    "SortingAnimationKitTests" : [
+      "SortingAnimationKit"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "writeCommands" : {
+    "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BubbleSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/BucketSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/CountingSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/HeapSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/InsertionSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/MergeSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/QuickSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/RadixSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SelectionSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/ShellSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmBase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Core/Algorithms/SortingAlgorithmFactory.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingExecutor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Data/Repositories/SortingRepository.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingAlgorithm.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Entities/SortingElement.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/Repositories/SortingRepositoryProtocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Domain/UseCases/GenerateArrayUseCase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Coordinators/SortingCoordinator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/AlgorithmListView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAnimationView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/Presentation/Views/SortingAppView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Sources/SortingAnimationKit.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/sources"
+    },
+    "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/AlgorithmDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/AlgorithmListView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/BubbleSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/BucketSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/CountingSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/GenerateArrayUseCase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/HeapSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/InsertionSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/MergeSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/QuickSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/RadixSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SelectionSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/ShellSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithm.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithmBase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAlgorithmFactory.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAppView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingElement.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingExecutor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingRepository.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingRepositoryProtocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingAlgorithmTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingRepositoryTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/SortingViewModelTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingAlgorithmTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingRepositoryTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/Azeroth/SortingAnimationKit/Tests/SortingAnimationKitTests/SortingViewModelTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKitTests.build/sources"
+    },
+    "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

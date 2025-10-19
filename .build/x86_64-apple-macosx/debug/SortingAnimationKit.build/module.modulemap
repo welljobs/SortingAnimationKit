@@ -1,0 +1,4 @@
+module SortingAnimationKit {
+    header "/Users/Azeroth/SortingAnimationKit/.build/x86_64-apple-macosx/debug/SortingAnimationKit.build/SortingAnimationKit-Swift.h"
+    requires objc
+}
