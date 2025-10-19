@@ -9,7 +9,7 @@
 - 🏗️ **现代架构**：采用Clean Architecture + MVVM + Repository + Coordinator模式
 - ⚡ **异步支持**：基于async/await的现代异步编程
 - 🧪 **完整测试**：包含单元测试和性能测试
-- 📱 **SwiftUI原生**：完全基于SwiftUI构建，支持iOS 16+
+- 📱 **SwiftUI原生**：完全基于SwiftUI构建，支持iOS 15+
 
 ## 支持的排序算法
 
