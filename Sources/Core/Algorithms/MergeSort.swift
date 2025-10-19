@@ -10,9 +10,11 @@ public class MergeSort: BaseSortingAlgorithm {
         super.init(name: "归并排序", type: .mergeSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
+        
+        print("🔧 MergeSort: 开始归并排序，数组大小: \(elements.count)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -33,6 +35,7 @@ public class MergeSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ MergeSort: 归并排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
     
@@ -53,7 +56,6 @@ public class MergeSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 递归排序左半部分
             let leftSteps = try await mergeSort(&elements, left: left, right: mid, animationSpeed: animationSpeed)
@@ -78,7 +80,6 @@ public class MergeSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
         }
         
         return steps
@@ -101,7 +102,6 @@ public class MergeSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         var i = 0  // 左数组索引
         var j = 0  // 右数组索引
@@ -138,7 +138,6 @@ public class MergeSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             if leftArray[i].value <= rightArray[j].value {
                 // 选择左数组元素
@@ -153,7 +152,6 @@ public class MergeSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
                 
                 i += 1
             } else {
@@ -169,7 +167,6 @@ public class MergeSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
                 
                 j += 1
             }
@@ -192,7 +189,6 @@ public class MergeSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             i += 1
             k += 1
@@ -212,7 +208,6 @@ public class MergeSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             j += 1
             k += 1
@@ -231,7 +226,6 @@ public class MergeSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         return steps
     }

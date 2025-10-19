@@ -104,7 +104,7 @@ public struct SortingAppView: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(Color(.systemBackground))
+        .background(Color(NSColor.controlBackgroundColor))
         .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: -1)
     }
 }
@@ -274,7 +274,7 @@ struct StatisticCard: View {
             Spacer()
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(Color(NSColor.controlBackgroundColor))
         .cornerRadius(10)
     }
 }

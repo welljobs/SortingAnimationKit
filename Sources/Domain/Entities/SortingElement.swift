@@ -1,10 +1,11 @@
 import Foundation
+import SwiftUI
 
 /// 排序元素实体
 /// 表示排序过程中的单个数据元素，包含值和状态信息
-public struct SortingElement: Identifiable, Equatable {
+public struct SortingElement: Identifiable, Equatable, Codable {
     /// 唯一标识符
-    public let id = UUID()
+    public var id = UUID()
     
     /// 元素的值
     public let value: Int
@@ -24,10 +25,14 @@ public struct SortingElement: Identifiable, Equatable {
     /// 是否已排序完成
     public var isSorted: Bool = false
     
-    public init(value: Int, position: Int, state: ElementState = .normal) {
+    /// 元素的随机颜色（用于区分不同元素）
+    public let randomColor: ElementColor
+    
+    public init(value: Int, position: Int, state: ElementState = .normal, randomColor: ElementColor? = nil) {
         self.value = value
         self.position = position
         self.state = state
+        self.randomColor = randomColor ?? ElementColor.random()
     }
 }
 
@@ -62,10 +67,62 @@ public enum ElementState: String, CaseIterable, Codable {
     }
 }
 
+/// 元素颜色枚举
+public enum ElementColor: String, CaseIterable, Codable {
+    case red
+    case blue
+    case green
+    case orange
+    case purple
+    case pink
+    case yellow
+    case cyan
+    case magenta
+    case brown
+    case indigo
+    case teal
+    
+    /// 生成随机颜色
+    public static func random() -> ElementColor {
+        let allColors = ElementColor.allCases
+        return allColors.randomElement() ?? .blue
+    }
+    
+    /// 转换为SwiftUI Color
+    public var swiftUIColor: Color {
+        switch self {
+        case .red:
+            return .red
+        case .blue:
+            return .blue
+        case .green:
+            return .green
+        case .orange:
+            return .orange
+        case .purple:
+            return .purple
+        case .pink:
+            return .pink
+        case .yellow:
+            return .yellow
+        case .cyan:
+            return .cyan
+        case .magenta:
+            return .pink
+        case .brown:
+            return .brown
+        case .indigo:
+            return .indigo
+        case .teal:
+            return .teal
+        }
+    }
+}
+
 /// 排序步骤实体
 /// 表示排序过程中的一个步骤，用于动画回放
-public struct SortingStep: Identifiable {
-    public let id = UUID()
+public struct SortingStep: Identifiable, Codable {
+    public var id = UUID()
     
     /// 步骤类型
     public let type: StepType

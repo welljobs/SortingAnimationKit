@@ -10,10 +10,12 @@ public class ShellSort: BaseSortingAlgorithm {
         super.init(name: "希尔排序", type: .shellSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
+        
+        print("🔧 ShellSort: 开始希尔排序，数组大小: \(elements.count)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -36,7 +38,6 @@ public class ShellSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 对每个间隔进行插入排序
             for i in gap..<n {
@@ -58,7 +59,6 @@ public class ShellSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
                 
                 // 在间隔为gap的已排序部分中寻找插入位置
                 while j >= gap {
@@ -78,7 +78,6 @@ public class ShellSort: BaseSortingAlgorithm {
                         delay: animationSpeed
                     ))
                     
-                    await waitForAnimation(delay: animationSpeed)
                     
                     if elements[j - gap].value > temp.value {
                         // 需要继续向前移动
@@ -92,7 +91,6 @@ public class ShellSort: BaseSortingAlgorithm {
                             delay: animationSpeed
                         ))
                         
-                        await waitForAnimation(delay: animationSpeed)
                         
                         // 移动元素
                         elements[j] = elements[j - gap]
@@ -111,7 +109,6 @@ public class ShellSort: BaseSortingAlgorithm {
                             delay: animationSpeed
                         ))
                         
-                        await waitForAnimation(delay: animationSpeed)
                         break
                     }
                 }
@@ -128,7 +125,6 @@ public class ShellSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
             }
             
             // 减少间隔
@@ -142,7 +138,6 @@ public class ShellSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
             }
         }
         
@@ -159,6 +154,7 @@ public class ShellSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ ShellSort: 希尔排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
 }

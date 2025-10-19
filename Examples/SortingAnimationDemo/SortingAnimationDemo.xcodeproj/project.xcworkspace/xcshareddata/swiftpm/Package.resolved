@@ -1,0 +1,15 @@
+{
+  "originHash" : "d74a29a21fa7829256d23a848f0e8b5c1047d7adcf4cb19212a5013406c0e99b",
+  "pins" : [
+    {
+      "identity" : "sortinganimationkit",
+      "kind" : "localSourceControl",
+      "location" : "/Users/Azeroth/SortingAnimationKit",
+      "state" : {
+        "revision" : "c3a7b6ac9608b652fcaee6ccfe4911ee0073d045",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -10,10 +10,12 @@ public class BucketSort: BaseSortingAlgorithm {
         super.init(name: "桶排序", type: .bucketSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
+        
+        print("🔧 BucketSort: 开始桶排序，数组大小: \(elements.count)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -34,7 +36,6 @@ public class BucketSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 创建桶
         let bucketCount = n
@@ -47,7 +48,6 @@ public class BucketSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 将元素分配到桶中
         steps.append(createHighlightStep(
@@ -75,7 +75,6 @@ public class BucketSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 将元素添加到桶中
             var element = elements[i]
@@ -91,7 +90,6 @@ public class BucketSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
         }
         
         // 对每个桶进行排序
@@ -102,7 +100,6 @@ public class BucketSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         var sortedElements: [SortingElement] = []
         var currentPosition = 0
@@ -118,7 +115,6 @@ public class BucketSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
                 
                 // 对桶进行插入排序
                 let bucketSteps = try await insertionSortBucket(&buckets[bucketIndex], bucketIndex: bucketIndex, animationSpeed: animationSpeed)
@@ -141,7 +137,6 @@ public class BucketSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
             }
         }
         
@@ -155,7 +150,6 @@ public class BucketSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 添加排序完成步骤
         steps.append(createSortedStep(
@@ -164,6 +158,7 @@ public class BucketSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ BucketSort: 桶排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
     
@@ -192,7 +187,6 @@ public class BucketSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 在已排序部分中寻找插入位置
             while j >= 0 {
@@ -212,7 +206,6 @@ public class BucketSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
                 
                 if bucket[j].value > key.value {
                     // 需要继续向左移动
@@ -226,7 +219,6 @@ public class BucketSort: BaseSortingAlgorithm {
                         delay: animationSpeed
                     ))
                     
-                    await waitForAnimation(delay: animationSpeed)
                     
                     // 移动元素
                     bucket[j + 1] = bucket[j]
@@ -245,7 +237,6 @@ public class BucketSort: BaseSortingAlgorithm {
                         delay: animationSpeed
                     ))
                     
-                    await waitForAnimation(delay: animationSpeed)
                     break
                 }
             }
@@ -262,7 +253,6 @@ public class BucketSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
         }
         
         return steps

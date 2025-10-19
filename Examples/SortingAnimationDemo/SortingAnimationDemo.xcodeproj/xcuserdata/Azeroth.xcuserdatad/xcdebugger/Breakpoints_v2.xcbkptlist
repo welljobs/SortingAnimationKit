@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "816AB71E-0E82-4348-9935-4F0D3BD18C6B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB0739ED-9CAE-4D9A-B7CE-B9A577DDED1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/Views/SortingAnimationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "headerView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "552EEF80-B113-4880-ABFB-634A6B072781"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/Views/SortingAnimationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "headerView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9203A835-E7FD-4F99-964F-D1486F112BB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/Views/SortingAnimationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "headerView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "695B515D-3CF3-4EB6-AD20-9FEC0A348976"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "startSorting()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B140F8DB-5C28-4FFA-B220-D40477AAAD9C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "startSorting()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B140F8DB-5C28-4FFA-B220-D40477AAAD9C - f9bf3f351107273f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in SortingAnimationKit.SortingViewModel.startSorting() -&gt; ()"
+                  moduleName = "SortingAnimationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Azeroth/Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155">
+               </Location>
+               <Location
+                  uuid = "B140F8DB-5C28-4FFA-B220-D40477AAAD9C - 790dc9758eefe7e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in SortingAnimationKit.SortingViewModel.startSorting() -&gt; ()"
+                  moduleName = "SortingAnimationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Azeroth/Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155">
+               </Location>
+               <Location
+                  uuid = "B140F8DB-5C28-4FFA-B220-D40477AAAD9C - 4ee41e489229f93d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in SortingAnimationKit.SortingViewModel.startSorting() -&gt; ()"
+                  moduleName = "SortingAnimationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Azeroth/Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CBCA5BA-1ADD-4B7A-BC89-0C552543428F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "startSorting()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49687A6B-605D-4A95-9606-599C8D020E24"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/SortingAnimationDemo-akotqmupkatteibxtwhccdsxcnfb/SourcePackages/checkouts/SortingAnimationKit/Sources/Presentation/ViewModels/SortingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "startSorting()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

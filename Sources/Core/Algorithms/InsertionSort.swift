@@ -10,10 +10,12 @@ public class InsertionSort: BaseSortingAlgorithm {
         super.init(name: "插入排序", type: .insertionSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
+        
+        print("🔧 InsertionSort: 开始插入排序，数组大小: \(n)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -34,8 +36,6 @@ public class InsertionSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
-        
         for i in 1..<n {
             guard await shouldContinue() else { break }
             
@@ -51,8 +51,6 @@ public class InsertionSort: BaseSortingAlgorithm {
                 description: "准备插入元素 \(key.value)",
                 delay: animationSpeed
             ))
-            
-            await waitForAnimation(delay: animationSpeed)
             
             // 在已排序部分中寻找插入位置
             while j >= 0 {
@@ -72,8 +70,6 @@ public class InsertionSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
-                
                 if elements[j].value > key.value {
                     // 需要继续向左移动
                     elements[j].state = .normal
@@ -85,8 +81,6 @@ public class InsertionSort: BaseSortingAlgorithm {
                         description: "\(elements[j].value) > \(key.value)，继续向左寻找",
                         delay: animationSpeed
                     ))
-                    
-                    await waitForAnimation(delay: animationSpeed)
                     
                     j -= 1
                 } else {
@@ -101,7 +95,6 @@ public class InsertionSort: BaseSortingAlgorithm {
                         delay: animationSpeed
                     ))
                     
-                    await waitForAnimation(delay: animationSpeed)
                     break
                 }
             }
@@ -119,8 +112,6 @@ public class InsertionSort: BaseSortingAlgorithm {
                     description: "将元素 \(key.value) 插入到位置 \(j + 1)",
                     delay: animationSpeed
                 ))
-                
-                await waitForAnimation(delay: animationSpeed)
                 
                 // 移动元素
                 for k in stride(from: i, to: j + 1, by: -1) {
@@ -153,8 +144,6 @@ public class InsertionSort: BaseSortingAlgorithm {
                 description: "前 \(i + 1) 个元素已排序",
                 delay: animationSpeed
             ))
-            
-            await waitForAnimation(delay: animationSpeed)
         }
         
         // 添加排序完成步骤
@@ -164,6 +153,7 @@ public class InsertionSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ InsertionSort: 插入排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
 }

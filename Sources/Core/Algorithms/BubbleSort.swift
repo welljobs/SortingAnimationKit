@@ -10,9 +10,9 @@ public class BubbleSort: BaseSortingAlgorithm {
         super.init(name: "冒泡排序", type: .bubbleSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
         
         // 处理空数组
@@ -31,6 +31,8 @@ public class BubbleSort: BaseSortingAlgorithm {
             ))
             return steps
         }
+        
+        print("🔧 BubbleSort: 开始冒泡排序，数组大小: \(n)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -70,8 +72,6 @@ public class BubbleSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
-                
                 if elements[j].value > elements[j + 1].value {
                     // 交换元素
                     elements[j].state = .swapping
@@ -83,8 +83,6 @@ public class BubbleSort: BaseSortingAlgorithm {
                         description: "交换 \(elements[j].value) 和 \(elements[j + 1].value)",
                         delay: animationSpeed
                     ))
-                    
-                    await waitForAnimation(delay: animationSpeed)
                     
                     // 执行交换
                     let temp = elements[j]
@@ -114,8 +112,6 @@ public class BubbleSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
-            
             // 如果没有发生交换，说明数组已经有序
             if !swapped {
                 // 标记所有剩余元素为已排序
@@ -142,6 +138,7 @@ public class BubbleSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ BubbleSort: 冒泡排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
 }

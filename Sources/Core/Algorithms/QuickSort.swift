@@ -10,9 +10,9 @@ public class QuickSort: BaseSortingAlgorithm {
         super.init(name: "快速排序", type: .quickSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         
         // 处理空数组
         if elements.isEmpty {
@@ -30,6 +30,8 @@ public class QuickSort: BaseSortingAlgorithm {
             ))
             return steps
         }
+        
+        print("🔧 QuickSort: 开始快速排序，数组大小: \(elements.count)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -50,6 +52,7 @@ public class QuickSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ QuickSort: 快速排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
     
@@ -71,7 +74,6 @@ public class QuickSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 分区操作
             let (partitionSteps, finalPivotIndex) = try await partition(&elements, low: low, high: high, pivotIndex: pivotIndex, animationSpeed: animationSpeed)
@@ -120,7 +122,6 @@ public class QuickSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         for j in low..<high {
             guard await shouldContinue() else { break }
@@ -139,7 +140,6 @@ public class QuickSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             if elements[j].value <= pivot {
                 i += 1
@@ -156,7 +156,6 @@ public class QuickSort: BaseSortingAlgorithm {
                         delay: animationSpeed
                     ))
                     
-                    await waitForAnimation(delay: animationSpeed)
                     
                     // 执行交换
                     let temp = elements[i]
@@ -190,7 +189,6 @@ public class QuickSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 执行交换
             let temp = elements[finalPivotIndex]
@@ -213,7 +211,6 @@ public class QuickSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         return (steps, i + 1)
     }

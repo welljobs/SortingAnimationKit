@@ -10,10 +10,12 @@ public class CountingSort: BaseSortingAlgorithm {
         super.init(name: "计数排序", type: .countingSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
+        
+        print("🔧 CountingSort: 开始计数排序，数组大小: \(elements.count)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -35,7 +37,6 @@ public class CountingSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 创建计数数组
         var count = Array(repeating: 0, count: range)
@@ -66,7 +67,6 @@ public class CountingSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             count[index] += 1
             
@@ -79,7 +79,6 @@ public class CountingSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
         }
         
         // 计算累积计数
@@ -94,7 +93,6 @@ public class CountingSort: BaseSortingAlgorithm {
             count[i] += count[i - 1]
         }
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 创建输出数组
         var output = Array(repeating: SortingElement(value: 0, position: 0), count: n)
@@ -126,7 +124,6 @@ public class CountingSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 创建输出元素
             output[outputIndex] = SortingElement(value: value, position: outputIndex)
@@ -142,7 +139,6 @@ public class CountingSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             count[countIndex] -= 1
         }
@@ -157,7 +153,6 @@ public class CountingSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 添加排序完成步骤
         steps.append(createSortedStep(
@@ -166,6 +161,7 @@ public class CountingSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ CountingSort: 计数排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
 }

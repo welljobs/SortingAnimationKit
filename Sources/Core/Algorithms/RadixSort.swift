@@ -10,10 +10,12 @@ public class RadixSort: BaseSortingAlgorithm {
         super.init(name: "基数排序", type: .radixSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
+        
+        print("🔧 RadixSort: 开始基数排序，数组大小: \(elements.count)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -33,7 +35,6 @@ public class RadixSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 按每一位进行计数排序
         var exp = 1
@@ -47,7 +48,6 @@ public class RadixSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 执行计数排序
             let countingSteps = try await countingSortByDigit(&elements, exp: exp, animationSpeed: animationSpeed)
@@ -69,6 +69,7 @@ public class RadixSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ RadixSort: 基数排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
     
@@ -105,7 +106,6 @@ public class RadixSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             count[digit] += 1
             
@@ -118,7 +118,6 @@ public class RadixSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
         }
         
         // 计算累积计数
@@ -133,7 +132,6 @@ public class RadixSort: BaseSortingAlgorithm {
             count[i] += count[i - 1]
         }
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 创建输出数组
         var output = Array(repeating: SortingElement(value: 0, position: 0), count: n)
@@ -165,7 +163,6 @@ public class RadixSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 创建输出元素
             output[outputIndex] = SortingElement(value: value, position: outputIndex)
@@ -180,7 +177,6 @@ public class RadixSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             count[digit] -= 1
         }
@@ -195,7 +191,6 @@ public class RadixSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         return steps
     }

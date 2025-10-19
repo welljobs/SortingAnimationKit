@@ -28,29 +28,39 @@ public class SortingExecutor: SortingExecutorProtocol {
         array: [Int],
         animationSpeed: Int
     ) async throws -> [SortingStep] {
+        print("🔧 SortingExecutor: 开始执行排序，算法: \(algorithm), 数组大小: \(array.count)")
+        
         guard !isExecuting else {
+            print("❌ SortingExecutor: 排序正在进行中，拒绝重复请求")
             throw SortingError.sortingInProgress
         }
         
+        print("🔧 SortingExecutor: 设置执行状态")
         isExecuting = true
         isPaused = false
         isStopped = false
         
         defer {
+            print("🔧 SortingExecutor: 重置执行状态")
             isExecuting = false
         }
         
         // 获取算法实例
         let algorithmInstance = algorithmFactory.getAlgorithm(for: algorithm)
         currentAlgorithm = algorithmInstance
+        print("🔧 SortingExecutor: 获取算法实例: \(algorithmInstance.name)")
         
         // 执行排序
+        print("🔧 SortingExecutor: 开始执行算法")
         let steps = try await algorithmInstance.sort(array, animationSpeed: animationSpeed)
+        print("🔧 SortingExecutor: 算法执行完成，生成 \(steps.count) 个步骤")
         
         if isStopped {
+            print("❌ SortingExecutor: 排序被停止")
             throw SortingError.sortingStopped
         }
         
+        print("✅ SortingExecutor: 排序执行成功")
         return steps
     }
     

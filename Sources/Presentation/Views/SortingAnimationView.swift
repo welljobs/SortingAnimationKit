@@ -34,9 +34,18 @@ public struct SortingAnimationView: View {
             
             // 统计信息
             statisticsView
+            
+            // 错误信息显示
+            if let errorMessage = viewModel.errorMessage {
+                Text("错误: \(errorMessage)")
+                    .foregroundColor(.red)
+                    .padding()
+                    .background(Color.red.opacity(0.1))
+                    .cornerRadius(8)
+            }
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(Color(NSColor.controlBackgroundColor))
         .onAppear {
             viewModel.generateRandomArray()
         }
@@ -97,6 +106,7 @@ public struct SortingAnimationView: View {
                 .padding(.vertical, 10)
                 .background(Color.gray)
                 .cornerRadius(8)
+                .disabled(viewModel.isSorting)
             }
         }
     }
@@ -129,7 +139,7 @@ public struct SortingAnimationView: View {
             }
             .frame(height: 200)
             .padding()
-            .background(Color(.systemBackground))
+            .background(Color(NSColor.controlBackgroundColor))
             .cornerRadius(10)
         }
     }
@@ -214,7 +224,7 @@ public struct SortingAnimationView: View {
             }
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(Color(NSColor.controlBackgroundColor))
         .cornerRadius(10)
     }
     
@@ -246,28 +256,28 @@ public struct SortingAnimationView: View {
             }
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(Color(NSColor.controlBackgroundColor))
         .cornerRadius(10)
     }
     
     // MARK: - Helper Methods
     
     private func elementColor(for element: SortingElement) -> Color {
+        // 根据元素状态决定是否使用状态颜色还是随机颜色
         switch element.state {
-        case .normal:
-            return .blue
         case .comparing:
             return .yellow
         case .swapping:
             return .red
-        case .sorted:
-            return .green
         case .pivot:
             return .purple
         case .min:
             return .orange
         case .max:
             return .pink
+        case .sorted, .normal:
+            // 对于正常状态和已排序状态，使用元素的随机颜色
+            return element.randomColor.swiftUIColor
         }
     }
 }

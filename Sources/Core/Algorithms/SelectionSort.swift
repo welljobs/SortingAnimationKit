@@ -10,10 +10,12 @@ public class SelectionSort: BaseSortingAlgorithm {
         super.init(name: "选择排序", type: .selectionSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
+        
+        print("🔧 SelectionSort: 开始选择排序，数组大小: \(n)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -38,7 +40,6 @@ public class SelectionSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 在未排序部分中寻找最小值
             for j in i + 1..<n {
@@ -58,7 +59,6 @@ public class SelectionSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
                 
                 if elements[j].value < elements[minIndex].value {
                     // 更新最小值索引
@@ -73,7 +73,6 @@ public class SelectionSort: BaseSortingAlgorithm {
                         delay: animationSpeed
                     ))
                     
-                    await waitForAnimation(delay: animationSpeed)
                 } else {
                     // 重置比较状态
                     elements[j].state = .normal
@@ -94,7 +93,6 @@ public class SelectionSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
                 
                 // 执行交换
                 let temp = elements[i]
@@ -123,7 +121,6 @@ public class SelectionSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
         }
         
         // 标记最后一个元素为已排序
@@ -137,6 +134,7 @@ public class SelectionSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ SelectionSort: 选择排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
 }

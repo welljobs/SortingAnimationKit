@@ -71,6 +71,7 @@ public class SortingViewModel: ObservableObject {
             do {
                 let array = try await generateArrayUseCase.generateRandomArray(size: arraySize)
                 elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+                print("生成随机数组: \(array)")
                 resetSortingState()
             } catch {
                 errorMessage = error.localizedDescription
@@ -132,21 +133,29 @@ public class SortingViewModel: ObservableObject {
     
     /// 开始排序
     public func startSorting() {
-        guard !isSorting else { return }
+        guard !isSorting else { 
+            print("⚠️ 排序正在进行中，忽略重复请求")
+            return 
+        }
         
         Task {
             do {
+                print("🚀 开始排序，数组: \(elements.map { $0.value }), 算法: \(currentAlgorithm)")
+                
                 isSorting = true
                 isPaused = false
                 isStopped = false
                 errorMessage = nil
                 
                 let array = elements.map { $0.value }
+                
                 let sortingSteps = try await executeSortingUseCase.executeSorting(
                     algorithm: currentAlgorithm,
                     array: array,
                     animationSpeed: animationSpeed
                 )
+                
+                print("✅ 排序完成，步骤数: \(sortingSteps.count)")
                 
                 steps = sortingSteps
                 currentStepIndex = 0
@@ -155,8 +164,19 @@ public class SortingViewModel: ObservableObject {
                 await playAnimation()
                 
             } catch {
-                errorMessage = error.localizedDescription
-                isSorting = false
+                print("❌ 排序错误: \(error)")
+                print("❌ 错误类型: \(type(of: error))")
+                if let sortingError = error as? SortingError {
+                    print("❌ 排序错误详情: \(sortingError.errorDescription ?? "未知错误")")
+                }
+                
+                // 确保在主线程更新UI
+                await MainActor.run {
+                    errorMessage = error.localizedDescription
+                    isSorting = false
+                    isPaused = false
+                    isStopped = false
+                }
             }
         }
     }
@@ -225,9 +245,12 @@ public class SortingViewModel: ObservableObject {
     
     /// 播放动画
     private func playAnimation() async {
+        print("开始播放动画，总步骤数: \(steps.count)")
         animationTask = Task {
             for (index, step) in steps.enumerated() {
                 guard !Task.isCancelled else { break }
+                
+                print("播放步骤 \(index + 1)/\(steps.count): \(step.description)")
                 
                 currentStep = step
                 currentStepIndex = index
@@ -242,6 +265,7 @@ public class SortingViewModel: ObservableObject {
             
             // 排序完成
             if !Task.isCancelled {
+                print("动画播放完成")
                 isSorting = false
                 isPaused = false
                 isStopped = false

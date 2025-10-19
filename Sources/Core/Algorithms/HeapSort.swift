@@ -10,10 +10,12 @@ public class HeapSort: BaseSortingAlgorithm {
         super.init(name: "堆排序", type: .heapSort)
     }
     
-    public override func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    public override func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         var steps: [SortingStep] = []
-        var elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        var elements = elements
         let n = elements.count
+        
+        print("🔧 HeapSort: 开始堆排序，数组大小: \(elements.count)")
         
         // 添加初始状态步骤
         steps.append(createHighlightStep(
@@ -53,7 +55,6 @@ public class HeapSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 执行交换
             let temp = elements[0]
@@ -75,7 +76,6 @@ public class HeapSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 重新堆化
             let heapifySteps = try await heapify(&elements, n: i, i: 0, animationSpeed: animationSpeed)
@@ -93,6 +93,7 @@ public class HeapSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
+        print("✅ HeapSort: 堆排序完成，生成 \(steps.count) 个步骤")
         return steps
     }
     
@@ -116,7 +117,6 @@ public class HeapSort: BaseSortingAlgorithm {
             delay: animationSpeed
         ))
         
-        await waitForAnimation(delay: animationSpeed)
         
         // 比较左子节点
         if left < n {
@@ -129,7 +129,6 @@ public class HeapSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             if elements[left].value > elements[largest].value {
                 largest = left
@@ -141,7 +140,6 @@ public class HeapSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
             }
             
             elements[left].state = .normal
@@ -158,7 +156,6 @@ public class HeapSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             if elements[right].value > elements[largest].value {
                 largest = right
@@ -170,7 +167,6 @@ public class HeapSort: BaseSortingAlgorithm {
                     delay: animationSpeed
                 ))
                 
-                await waitForAnimation(delay: animationSpeed)
             }
             
             elements[right].state = .normal
@@ -188,7 +184,6 @@ public class HeapSort: BaseSortingAlgorithm {
                 delay: animationSpeed
             ))
             
-            await waitForAnimation(delay: animationSpeed)
             
             // 执行交换
             let temp = elements[i]

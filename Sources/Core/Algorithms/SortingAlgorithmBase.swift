@@ -40,32 +40,45 @@ open class BaseSortingAlgorithm: SortingAlgorithmBase {
     }
     
     open func sort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+        print("🔧 BaseSortingAlgorithm: 开始排序，算法: \(name), 数组大小: \(array.count)")
+        
         let canStart = await sortingActor.canStartSorting()
+        print("🔧 BaseSortingAlgorithm: 检查是否可以开始排序: \(canStart)")
         
         guard canStart else {
+            print("❌ BaseSortingAlgorithm: 排序正在进行中，无法开始")
             throw SortingError.sortingInProgress
         }
         
+        print("🔧 BaseSortingAlgorithm: 设置排序状态")
         await sortingActor.startSorting()
         
         defer {
+            print("🔧 BaseSortingAlgorithm: 清理排序状态")
             Task {
                 await sortingActor.stopSorting()
             }
         }
         
-        let steps = try await performSort(array, animationSpeed: animationSpeed)
+        // 将Int数组转换为SortingElement数组，保持随机颜色
+        let elements = array.enumerated().map { SortingElement(value: $0.element, position: $0.offset) }
+        print("🔧 BaseSortingAlgorithm: 转换为SortingElement数组，开始执行具体排序")
+        
+        let steps = try await performSort(elements, animationSpeed: animationSpeed)
+        print("🔧 BaseSortingAlgorithm: 具体排序完成，生成 \(steps.count) 个步骤")
         
         let isStopped = await sortingActor.isStoppedState
         if isStopped {
+            print("❌ BaseSortingAlgorithm: 排序被停止")
             throw SortingError.sortingStopped
         }
         
+        print("✅ BaseSortingAlgorithm: 排序成功完成")
         return steps
     }
     
     /// 子类需要实现的具体排序逻辑
-    open func performSort(_ array: [Int], animationSpeed: Int) async throws -> [SortingStep] {
+    open func performSort(_ elements: [SortingElement], animationSpeed: Int) async throws -> [SortingStep] {
         fatalError("子类必须实现 performSort 方法")
     }
     
