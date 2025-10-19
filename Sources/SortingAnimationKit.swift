@@ -22,7 +22,7 @@ public struct SortingAnimationKitInfo {
     public static let minimumIOSVersion = "15.0"
     
     /// 支持的macOS版本
-    public static let minimumMacOSVersion = "12.0"
+    public static let minimumMacOSVersion = "13.0"
 }
 
 /// 快速创建排序动画应用的便捷方法
