@@ -45,7 +45,7 @@ public struct SortingAnimationView: View {
             }
         }
         .padding()
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .onAppear {
             viewModel.generateRandomArray()
         }
@@ -135,7 +135,7 @@ public struct SortingAnimationView: View {
             }
             .frame(height: 200)
             .padding()
-            .background(Color(.systemGray6))
+            .background(Color.platformBackground)
             .cornerRadius(10)
         }
     }
@@ -220,7 +220,7 @@ public struct SortingAnimationView: View {
             }
         }
         .padding()
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .cornerRadius(10)
     }
     
@@ -252,7 +252,7 @@ public struct SortingAnimationView: View {
             }
         }
         .padding()
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .cornerRadius(10)
     }
     

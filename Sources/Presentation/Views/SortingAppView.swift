@@ -39,7 +39,7 @@ public struct SortingAppView: View {
             // 底部导航栏
             bottomNavigationBar
         }
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .sheet(isPresented: $coordinator.showAlgorithmDetail) {
             AlgorithmDetailView(algorithm: coordinator.selectedAlgorithm)
         }
@@ -65,11 +65,11 @@ public struct SortingAppView: View {
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 12)
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .overlay(
             Rectangle()
                 .frame(height: 1)
-                .foregroundColor(Color(.separator)),
+                .foregroundColor(Color.platformSeparator),
             alignment: .bottom
         )
     }
@@ -129,7 +129,7 @@ public struct SortingAppView: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: -1)
     }
 }
@@ -202,11 +202,11 @@ struct SettingsView: View {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
-            .background(Color(.systemGray6))
+            .background(Color.platformBackground)
             .overlay(
                 Rectangle()
                     .frame(height: 1)
-                    .foregroundColor(Color(.separator)),
+                    .foregroundColor(Color.platformSeparator),
                 alignment: .bottom
             )
             
@@ -270,7 +270,7 @@ struct SettingsView: View {
                 .padding(.top, 20)
             }
         }
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .frame(width: 400, height: 500)
     }
     
@@ -310,11 +310,11 @@ struct SettingsCard<Content: View>: View {
             content
         }
         .padding(20)
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .cornerRadius(12)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(.separator), lineWidth: 1)
+                .stroke(Color.platformSeparator, lineWidth: 1)
         )
     }
 }
@@ -468,7 +468,7 @@ struct StatisticCard: View {
             Spacer()
         }
         .padding()
-        .background(Color(.systemGray6))
+        .background(Color.platformBackground)
         .cornerRadius(10)
     }
 }
