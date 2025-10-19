@@ -67,7 +67,7 @@ public struct AlgorithmDetailView: View {
                 InfoRow(title: "稳定性", value: algorithm.complexity.stable ? "稳定" : "不稳定")
             }
             .padding()
-            .background(Color(NSColor.controlBackgroundColor))
+            .background(Color(.systemGray6))
             .cornerRadius(10)
         }
     }
@@ -106,7 +106,7 @@ public struct AlgorithmDetailView: View {
                 )
             }
             .padding()
-            .background(Color(NSColor.controlBackgroundColor))
+            .background(Color(.systemGray6))
             .cornerRadius(10)
         }
     }
@@ -123,7 +123,7 @@ public struct AlgorithmDetailView: View {
                 .font(.body)
                 .foregroundColor(.secondary)
                 .padding()
-                .background(Color(NSColor.controlBackgroundColor))
+                .background(Color(.systemGray6))
                 .cornerRadius(10)
         }
     }
@@ -156,7 +156,7 @@ public struct AlgorithmDetailView: View {
                 )
             }
             .padding()
-            .background(Color(NSColor.controlBackgroundColor))
+            .background(Color(.systemGray6))
             .cornerRadius(10)
         }
     }
@@ -183,7 +183,7 @@ public struct AlgorithmDetailView: View {
                 }
             }
             .padding()
-            .background(Color(NSColor.controlBackgroundColor))
+            .background(Color(.systemGray6))
             .cornerRadius(10)
         }
     }
