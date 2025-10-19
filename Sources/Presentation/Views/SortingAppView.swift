@@ -189,7 +189,7 @@ struct SettingsView: View {
                 
                 Text("设置")
                     .font(.headline)
-                    .fontWeight(.semibold)
+                    .fontWeight(.medium)
                 
                 Spacer()
                 
@@ -198,7 +198,7 @@ struct SettingsView: View {
                     dismiss()
                 }
                 .foregroundColor(.blue)
-                .fontWeight(.semibold)
+                .fontWeight(.medium)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
@@ -302,7 +302,7 @@ struct SettingsCard<Content: View>: View {
                 
                 Text(title)
                     .font(.headline)
-                    .fontWeight(.semibold)
+                    .fontWeight(.medium)
                 
                 Spacer()
             }
@@ -349,7 +349,7 @@ struct SettingRow: View {
                 Text(value)
                     .font(.subheadline)
                     .foregroundColor(.blue)
-                    .fontWeight(.semibold)
+                    .fontWeight(.medium)
             }
             
             Text(subtitle)
