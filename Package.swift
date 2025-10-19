@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "SortingAnimationKit",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
         .macOS(.v12)
