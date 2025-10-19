@@ -5,7 +5,7 @@ let package = Package(
     name: "SortingAnimationKit",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v15),
+        .iOS(.v16),
         .macOS(.v13)
     ],
     products: [

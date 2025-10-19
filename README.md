@@ -9,7 +9,7 @@
 - 🏗️ **现代架构**：采用Clean Architecture + MVVM + Repository + Coordinator模式
 - ⚡ **异步支持**：基于async/await的现代异步编程
 - 🧪 **完整测试**：包含单元测试和性能测试
-- 📱 **SwiftUI原生**：完全基于SwiftUI构建，支持iOS 15+
+- 📱 **SwiftUI原生**：完全基于SwiftUI构建，支持iOS 16+
 
 ## 支持的排序算法
 
@@ -213,7 +213,7 @@ open Examples/SortingAnimationDemo.xcodeproj
 
 **功能特性：**
 - 🎨 完整的SwiftUI界面
-- 📱 支持iOS 15.0+ 和 macOS 12.0+
+- 📱 支持iOS 16.0+ 和 macOS 13.0+
 - 🎯 交互式排序动画
 - 📊 实时统计信息
 - 🔧 算法参数调节

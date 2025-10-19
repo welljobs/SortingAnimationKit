@@ -20,7 +20,7 @@ if [ ! -d "$PROJECT_PATH" ]; then
 fi
 
 echo "📱 支持的平台:"
-echo "   • iOS 15.0+"
+echo "   • iOS 16.0+"
 echo "   • macOS 12.0+"
 echo ""
 

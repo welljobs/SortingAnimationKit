@@ -288,7 +288,7 @@ func main() {
     print("\n✅ 测试完成!")
     print("\n💡 提示:")
     print("   • 要查看完整的UI界面，请在Xcode中打开 Examples/SortingAnimationDemo.xcodeproj")
-    print("   • 支持iOS 15.0+ 和 macOS 12.0+")
+    print("   • 支持iOS 16.0+ 和 macOS 13.0+")
     print("   • 库采用Clean Architecture + MVVM + Repository模式")
 }
 
