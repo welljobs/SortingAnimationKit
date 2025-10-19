@@ -29,24 +29,49 @@ public struct SortingAppView: View {
     // MARK: - Body
     
     public var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                // 主内容区域
-                mainContentView
-                
-                // 底部导航栏
-                bottomNavigationBar
-            }
-            #if os(iOS)
-            .navigationBarHidden(true)
-            #endif
+        VStack(spacing: 0) {
+            // 应用标题栏
+            appTitleBar
+            
+            // 主内容区域
+            mainContentView
+            
+            // 底部导航栏
+            bottomNavigationBar
         }
+        .background(Color(NSColor.controlBackgroundColor))
         .sheet(isPresented: $coordinator.showAlgorithmDetail) {
             AlgorithmDetailView(algorithm: coordinator.selectedAlgorithm)
         }
         .sheet(isPresented: $coordinator.showSettings) {
             SettingsView(viewModel: viewModel, coordinator: coordinator)
         }
+    }
+    
+    // MARK: - App Title Bar
+    
+    private var appTitleBar: some View {
+        HStack {
+            Text("排序动画演示")
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(.primary)
+            
+            Spacer()
+            
+            Text("SortingAnimationKit")
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 12)
+        .background(Color(NSColor.controlBackgroundColor))
+        .overlay(
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(Color(NSColor.separatorColor)),
+            alignment: .bottom
+        )
     }
     
     // MARK: - Main Content View

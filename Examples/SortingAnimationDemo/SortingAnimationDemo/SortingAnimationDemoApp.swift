@@ -14,5 +14,7 @@ struct SortingAnimationDemoApp: App {
         WindowGroup {
             SortingAppView()
         }
+        .windowResizability(.contentSize)
+        .defaultSize(width: 800, height: 600)
     }
 }

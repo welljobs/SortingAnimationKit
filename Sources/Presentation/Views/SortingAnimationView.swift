@@ -23,8 +23,8 @@ public struct SortingAnimationView: View {
     
     public var body: some View {
         VStack(spacing: 20) {
-            // 标题和控制按钮
-            headerView
+            // 控制按钮区域
+            controlButtonsView
             
             // 排序元素显示区域
             sortingElementsView
@@ -51,14 +51,10 @@ public struct SortingAnimationView: View {
         }
     }
     
-    // MARK: - Header View
+    // MARK: - Control Buttons View
     
-    private var headerView: some View {
+    private var controlButtonsView: some View {
         VStack(spacing: 10) {
-            Text("排序动画演示")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
             Text("当前算法: \(viewModel.currentAlgorithm.displayName)")
                 .font(.headline)
                 .foregroundColor(.secondary)
