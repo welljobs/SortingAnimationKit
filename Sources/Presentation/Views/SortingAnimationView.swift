@@ -36,7 +36,7 @@ public struct SortingAnimationView: View {
             statisticsView
         }
         .padding()
-        .background(Color(NSColor.controlBackgroundColor))
+        .background(Color(.systemBackground))
         .onAppear {
             viewModel.generateRandomArray()
         }
@@ -129,7 +129,7 @@ public struct SortingAnimationView: View {
             }
             .frame(height: 200)
             .padding()
-            .background(Color(NSColor.controlColor))
+            .background(Color(.systemBackground))
             .cornerRadius(10)
         }
     }
