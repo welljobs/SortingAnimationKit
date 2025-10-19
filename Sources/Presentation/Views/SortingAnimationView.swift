@@ -214,7 +214,7 @@ public struct SortingAnimationView: View {
             }
         }
         .padding()
-        .background(Color(NSColor.controlColor))
+        .background(Color(.systemBackground))
         .cornerRadius(10)
     }
     
@@ -246,7 +246,7 @@ public struct SortingAnimationView: View {
             }
         }
         .padding()
-        .background(Color(NSColor.controlColor))
+        .background(Color(.systemBackground))
         .cornerRadius(10)
     }
     
