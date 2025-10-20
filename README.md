@@ -2,6 +2,11 @@
 
 一个基于SwiftUI的排序算法动画演示库，采用Clean Architecture + MVVM + Repository + Coordinator架构模式。
 
+[![Swift](https://img.shields.io/badge/Swift-5.9+-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/badge/Platform-iOS%2017%2B%20%7C%20macOS%2013%2B-blue.svg)](https://developer.apple.com/swift/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-welljobs-black.svg)](https://github.com/welljobs)
+
 ## 功能特性
 
 - 🎯 **十大排序算法**：支持冒泡、选择、插入、希尔、归并、快速、堆、计数、桶、基数排序
@@ -35,7 +40,7 @@
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yourusername/SortingAnimationKit.git", from: "1.0.0")
+    .package(url: "https://github.com/welljobs/SortingAnimationKit.git", from: "1.0.0")
 ]
 ```
 
@@ -259,17 +264,40 @@ struct SortingAnimationDemoApp: App {
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 打开 Pull Request
 
+### 开发环境
+
+- Swift 5.9+
+- Xcode 15.0+
+- iOS 17.0+ / macOS 13.0+
+
+### 代码规范
+
+- 遵循 Swift API 设计指南
+- 使用 SwiftLint 进行代码检查
+- 保持 80%+ 的测试覆盖率
+
 ## 许可证
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
 ## 联系方式
 
-- 项目链接: [https://github.com/yourusername/SortingAnimationKit](https://github.com/yourusername/SortingAnimationKit)
-- 问题反馈: [Issues](https://github.com/yourusername/SortingAnimationKit/issues)
+- 项目链接: [https://github.com/welljobs/SortingAnimationKit](https://github.com/welljobs/SortingAnimationKit)
+- 问题反馈: [Issues](https://github.com/welljobs/SortingAnimationKit/issues)
+- 作者: [@welljobs](https://github.com/welljobs)
 
 ## 致谢
 
 - 感谢所有排序算法的经典实现
 - 感谢SwiftUI团队提供的优秀框架
 - 感谢所有贡献者的支持
+
+## 更新日志
+
+### v1.0.0 (2025-10-21)
+- 🎉 首次发布
+- ✨ 支持10种排序算法
+- 🎨 完整的SwiftUI动画界面
+- 🏗️ Clean Architecture架构设计
+- 🧪 完整的单元测试覆盖
+- 📱 支持iOS 17+ 和 macOS 13+
