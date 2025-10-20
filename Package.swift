@@ -13,6 +13,10 @@ let package = Package(
             name: "SortingAnimationKit",
             targets: ["SortingAnimationKit"]
         ),
+        .executable(
+            name: "SortingAnimationDemo",
+            targets: ["SortingAnimationDemo"]
+        ),
     ],
     dependencies: [
 
@@ -28,6 +32,14 @@ let package = Package(
             name: "SortingAnimationKitTests",
             dependencies: ["SortingAnimationKit"],
             path: "Tests"
+        ),
+        .executableTarget(
+            name: "SortingAnimationDemo",
+            dependencies: ["SortingAnimationKit"],
+            path: "Examples/Demo",
+            resources: [
+                .process("Resources")
+            ]
         ),
     ]
 )

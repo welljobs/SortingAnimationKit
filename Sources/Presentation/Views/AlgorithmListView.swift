@@ -18,8 +18,7 @@ public struct AlgorithmListView: View {
     // MARK: - Body
     
     public var body: some View {
-        NavigationView {
-            VStack {
+        VStack {
                 // 搜索栏
                 SearchBar(text: $searchText)
                 
@@ -33,6 +32,7 @@ public struct AlgorithmListView: View {
                                 isSelected: algorithm == coordinator.selectedAlgorithm
                             ) {
                                 coordinator.selectAlgorithm(algorithm)
+                                coordinator.navigate(to: .algorithmDetail)
                             }
                         }
                     }
@@ -45,6 +45,7 @@ public struct AlgorithmListView: View {
                                 isSelected: algorithm == coordinator.selectedAlgorithm
                             ) {
                                 coordinator.selectAlgorithm(algorithm)
+                                coordinator.navigate(to: .algorithmDetail)
                             }
                         }
                     }
@@ -54,18 +55,6 @@ public struct AlgorithmListView: View {
                 #else
                 .listStyle(.inset)
                 #endif
-            }
-            .navigationTitle("排序算法")
-            #if os(iOS)
-            .navigationBarTitleDisplayMode(.large)
-            #endif
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button("完成") {
-                        coordinator.goBack()
-                    }
-                }
-            }
         }
     }
     

@@ -22,29 +22,36 @@ public struct SortingAnimationView: View {
     // MARK: - Body
     
     public var body: some View {
-        VStack(spacing: 20) {
-            // 控制按钮区域
-            controlButtonsView
-            
-            // 排序元素显示区域
-            sortingElementsView
-            
-            // 控制面板
-            controlPanelView
-            
-            // 统计信息
-            statisticsView
-            
-            // 错误信息显示
-            if let errorMessage = viewModel.errorMessage {
-                Text("错误: \(errorMessage)")
-                    .foregroundColor(.red)
-                    .padding()
-                    .background(Color.red.opacity(0.1))
-                    .cornerRadius(8)
+        GeometryReader { proxy in
+            ScrollView {
+                VStack(spacing: 20) {
+                    // 控制按钮区域
+                    controlButtonsView
+                    
+                    // 排序元素显示区域
+                    sortingElementsView
+                    
+                    // 控制面板
+                    controlPanelView
+                    
+                    // 统计信息
+                    statisticsView
+                    
+                    // 错误信息显示
+                    if let errorMessage = viewModel.errorMessage {
+                        Text("错误: \(errorMessage)")
+                            .foregroundColor(.red)
+                            .padding()
+                            .background(Color.red.opacity(0.1))
+                            .cornerRadius(8)
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.top, 12)
+                .padding(.bottom, 24)
+                .frame(minHeight: proxy.size.height, alignment: .top)
             }
         }
-        .padding()
         .background(Color.platformBackground)
         .onAppear {
             viewModel.generateRandomArray()
@@ -114,29 +121,42 @@ public struct SortingAnimationView: View {
             Text("排序过程")
                 .font(.headline)
             
-            // 元素显示区域
-            HStack(alignment: .bottom, spacing: 2) {
-                ForEach(viewModel.elements) { element in
-                    VStack(spacing: 4) {
-                        // 元素值
-                        Text("\(element.value)")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
-                        
-                        // 元素条
-                        Rectangle()
-                            .fill(elementColor(for: element))
-                            .frame(width: 20, height: CGFloat(element.value) * 3)
-                            .cornerRadius(2)
-                            .animation(.easeInOut(duration: 0.3), value: element.state)
+            // 元素显示区域（自适应 iOS 屏幕尺寸）
+            GeometryReader { geometry in
+                let availableWidth = max(geometry.size.width - 32, 1)
+                let availableHeight = max(geometry.size.height - 32, 1)
+                let elementCount = max(viewModel.elements.count, 1)
+                let maxValue = max(viewModel.elements.map { $0.value }.max() ?? 1, 1)
+                let barSpacing: CGFloat = 2
+                let barWidth = max((availableWidth - CGFloat(elementCount - 1) * barSpacing) / CGFloat(elementCount), 4)
+                
+                HStack(alignment: .bottom, spacing: barSpacing) {
+                    ForEach(viewModel.elements) { element in
+                        VStack(spacing: 4) {
+                            Text("\(element.value)")
+                                .font(.caption2)
+                                .fontWeight(.medium)
+                                .foregroundColor(.white)
+                                .minimumScaleFactor(0.6)
+                                .lineLimit(1)
+                                
+                            Rectangle()
+                                .fill(elementColor(for: element))
+                                .frame(
+                                    width: barWidth,
+                                    height: max(CGFloat(element.value) / CGFloat(maxValue) * availableHeight, 4)
+                                )
+                                .cornerRadius(2)
+                                .animation(.easeInOut(duration: 0.3), value: element.state)
+                        }
+                        .frame(maxWidth: barWidth)
                     }
                 }
+                .padding()
+                .background(Color.platformBackground)
+                .cornerRadius(10)
             }
-            .frame(height: 200)
-            .padding()
-            .background(Color.platformBackground)
-            .cornerRadius(10)
+            .frame(height: 220)
         }
     }
     

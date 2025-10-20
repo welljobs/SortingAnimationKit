@@ -42,13 +42,13 @@ public struct AlgorithmDetailView: View {
             #if os(iOS)
             .navigationBarTitleDisplayMode(.large)
             #endif
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button("完成") {
-                        dismiss()
-                    }
-                }
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .primaryAction) {
+//                    Button("完成") {
+//                        dismiss()
+//                    }
+//                }
+//            }
         }
     }
     

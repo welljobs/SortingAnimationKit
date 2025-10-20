@@ -29,134 +29,40 @@ public struct SortingAppView: View {
     // MARK: - Body
     
     public var body: some View {
-        VStack(spacing: 0) {
-            // 应用标题栏
-            appTitleBar
+        TabView(selection: $coordinator.currentView) {
+            // 主页
+            SortingAnimationView(viewModel: viewModel, coordinator: coordinator)
+                .tabItem {
+                    Label("主页", systemImage: "house.fill")
+                }
+                .tag(SortingViewType.main)
             
-            // 主内容区域
-            mainContentView
+            // 算法列表
+            AlgorithmListView(coordinator: coordinator)
+                .tabItem {
+                    Label("算法", systemImage: "list.bullet")
+                }
+                .tag(SortingViewType.algorithmList)
             
-            // 底部导航栏
-            bottomNavigationBar
+            // 统计页面
+            StatisticsView(viewModel: viewModel)
+                .tabItem {
+                    Label("统计", systemImage: "chart.bar.fill")
+                }
+                .tag(SortingViewType.statistics)
+            
+            // 设置页面
+            SettingsView(viewModel: viewModel, coordinator: coordinator)
+                .tabItem {
+                    Label("设置", systemImage: "gear")
+                }
+                .tag(SortingViewType.settings)
         }
-        .background(Color.platformBackground)
         .sheet(isPresented: $coordinator.showAlgorithmDetail) {
             AlgorithmDetailView(algorithm: coordinator.selectedAlgorithm)
         }
-        .sheet(isPresented: $coordinator.showSettings) {
-            SettingsView(viewModel: viewModel, coordinator: coordinator)
-        }
     }
     
-    // MARK: - App Title Bar
-    
-    private var appTitleBar: some View {
-        HStack {
-            Text("排序动画演示")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.primary)
-            
-            Spacer()
-            
-            Text("SortingAnimationKit")
-                .font(.caption)
-                .foregroundColor(.secondary)
-        }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 12)
-        .background(Color.platformBackground)
-        .overlay(
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(Color.platformSeparator),
-            alignment: .bottom
-        )
-    }
-    
-    // MARK: - Main Content View
-    
-    private var mainContentView: some View {
-        Group {
-            switch coordinator.currentView {
-            case .main:
-                SortingAnimationView(viewModel: viewModel, coordinator: coordinator)
-            case .algorithmList:
-                AlgorithmListView(coordinator: coordinator)
-            case .statistics:
-                StatisticsView(viewModel: viewModel)
-            default:
-                SortingAnimationView(viewModel: viewModel, coordinator: coordinator)
-            }
-        }
-    }
-    
-    // MARK: - Bottom Navigation Bar
-    
-    private var bottomNavigationBar: some View {
-        HStack(spacing: 0) {
-            NavigationButton(
-                icon: "house.fill",
-                title: "主页",
-                isSelected: coordinator.currentView == .main
-            ) {
-                coordinator.goToMain()
-            }
-            
-            NavigationButton(
-                icon: "list.bullet",
-                title: "算法",
-                isSelected: coordinator.currentView == .algorithmList
-            ) {
-                coordinator.navigate(to: .algorithmList)
-            }
-            
-            NavigationButton(
-                icon: "chart.bar.fill",
-                title: "统计",
-                isSelected: coordinator.currentView == .statistics
-            ) {
-                coordinator.navigate(to: .statistics)
-            }
-            
-            NavigationButton(
-                icon: "gear",
-                title: "设置",
-                isSelected: coordinator.showSettings
-            ) {
-                coordinator.presentSettings()
-            }
-        }
-        .padding(.horizontal)
-        .padding(.vertical, 8)
-        .background(Color.platformBackground)
-        .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: -1)
-    }
-}
-
-/// 导航按钮
-struct NavigationButton: View {
-    let icon: String
-    let title: String
-    let isSelected: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            VStack(spacing: 4) {
-                Image(systemName: icon)
-                    .font(.system(size: 20))
-                    .foregroundColor(isSelected ? .blue : .gray)
-                
-                Text(title)
-                    .font(.caption)
-                    .foregroundColor(isSelected ? .blue : .gray)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 8)
-        }
-        .buttonStyle(PlainButtonStyle())
-    }
 }
 
 /// 设置视图
@@ -177,43 +83,62 @@ struct SettingsView: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            // 标题栏
-            HStack {
-                Button("取消") {
-                    dismiss()
+        #if os(iOS)
+        NavigationStack {
+            Form {
+                Section("排序设置") {
+                    VStack(spacing: 16) {
+                        SettingRow(
+                            title: "数组大小",
+                            subtitle: "控制排序元素的数量",
+                            value: "\(tempArraySize)",
+                            range: 5...50,
+                            binding: $tempArraySize
+                        )
+                        
+                        SettingRow(
+                            title: "动画速度",
+                            subtitle: "控制排序动画的播放速度",
+                            value: "\(tempAnimationSpeed)ms",
+                            range: 100...2000,
+                            step: 100,
+                            binding: $tempAnimationSpeed
+                        )
+                    }
                 }
-                .foregroundColor(.red)
                 
-                Spacer()
-                
-                Text("设置")
-                    .font(.headline)
-                    .fontWeight(.medium)
-                
-                Spacer()
-                
-                Button("保存") {
-                    saveSettings()
-                    dismiss()
+                Section("算法设置") {
+                    Picker("默认算法", selection: $tempAlgorithm) {
+                        ForEach(SortingAlgorithm.allCases) { algorithm in
+                            Text(algorithm.displayName).tag(algorithm)
+                        }
+                    }
+                    .pickerStyle(.menu)
                 }
-                .foregroundColor(.blue)
-                .fontWeight(.medium)
+                
+                Section("关于") {
+                    AboutRow(title: "版本", value: "1.0.0")
+                    AboutRow(title: "开发者", value: "SortingAnimationKit")
+                    AboutRow(title: "平台", value: "iOS")
+                }
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 12)
-            .background(Color.platformBackground)
-            .overlay(
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(Color.platformSeparator),
-                alignment: .bottom
-            )
-            
-            // 设置内容
+            .navigationTitle("设置")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("取消") { dismiss() }
+                        .foregroundColor(.red)
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("保存") { saveSettings(); dismiss() }
+                        .fontWeight(.medium)
+                }
+            }
+        }
+        #else
+        VStack(spacing: 0) {
+            // 设置内容（macOS）
             ScrollView {
-                VStack(spacing: 24) {
-                    // 排序设置卡片
+                VStack(spacing: 16) {
                     SettingsCard(title: "排序设置", icon: "slider.horizontal.3") {
                         VStack(spacing: 16) {
                             SettingRow(
@@ -235,7 +160,6 @@ struct SettingsView: View {
                         }
                     }
                     
-                    // 算法设置卡片
                     SettingsCard(title: "算法设置", icon: "brain.head.profile") {
                         VStack(spacing: 12) {
                             HStack {
@@ -255,7 +179,6 @@ struct SettingsView: View {
                         }
                     }
                     
-                    // 关于卡片
                     SettingsCard(title: "关于", icon: "info.circle") {
                         VStack(spacing: 12) {
                             AboutRow(title: "版本", value: "1.0.0")
@@ -267,11 +190,14 @@ struct SettingsView: View {
                     Spacer(minLength: 20)
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 20)
+                .padding(.top, 8)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.bottom, 8)
         }
         .background(Color.platformBackground)
-        .frame(width: 400, height: 500)
+        #endif
     }
     
     private func saveSettings() {
@@ -309,7 +235,7 @@ struct SettingsCard<Content: View>: View {
             
             content
         }
-        .padding(20)
+        .padding(16)
         .background(Color.platformBackground)
         .cornerRadius(12)
         .overlay(
